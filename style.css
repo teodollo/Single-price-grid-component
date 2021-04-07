@@ -1,90 +1,168 @@
+*{
+    font-family: 'Karla', sans-serif;
+}
 body{
-    margin: 8%;
+    height: 100%;
+    margin: 5%;
     background-color: #e0ebeb;
 }
 
-#main-grid{
+main{
+    width: 100%;
     display: grid;
-    margin: 50 px;
-    border: 1px solid;
+    border-style: solid;
     border-color: #e0ebeb;
     border-radius: 10px;
+    height: 100%;
+    
     
 }
+
+.margin-left{
+    margin-left:25px;
+}
 .join-community{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: whitesmoke;
-    border-bottom: 40px;
-    border-top: 25px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    height: 212.391px;
 }
 .join-community h1{
-    color:#40E0D0;
+    color: hsl(179, 62%, 43%);
     font-size: 20px;
-    margin-left: 20px;
+    
+    
 }
 .join-community h3{
-    color: #99cc00;
+    color: hsl(71, 73%, 54%);
     font-size: 17px;
-    margin-left: 20px;
+    
 }
 .join-community p{
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
-    color: #b3b3b3;
-    margin-left: 20px;
+    color: hsl(218, 22%, 67%);
+    
+    max-width: 263px;
 }
 
 .Sign-up{
+    height: 212.391px;
     background-color: #2eb8b8;
     text-align: left;
     padding-top: 10px;
     padding-bottom: 25px;
-    
+    line-height: 0.8;
 }
 .Sign-up h2{
     color: whitesmoke;
     font-size: 19px;
-    margin-left: 20px;
+    
 }
 .Sign-up h1{
     color: whitesmoke;
-    margin-left: 20px;
+    
 }
 .Sign-up h1 small{
-    color:#d9d9d9;
+    color:#98e6e6;
     font-size: 17px;
     margin-left: 5px;
 }
 .Sign-up p{
     color:whitesmoke;
     font-size: 17px;
-    margin-left: 20px;
+    
 }
 
 button{
-    padding: 15px 100px 15px 100px;
-    border-radius: 10px;
-    background-color:#99cc00 ;
+    margin: auto;
+    font-size: 17px;
+    margin-top: 24px;
+    margin-left: 17px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:hsl(71, 73%, 54%);
     color: whitesmoke;
-    text-align: center;
-    margin: auto 0;
-    align-items:center;
-    width: 80;
+    width: 90%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     
 }
 
 .why-us{
-    background-color: #47d1d1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 212.391px;
+    background-color: #33cccc;
     padding-bottom: 25px;
 }
 .why-us h2{
+    margin-top: 20px;
     color: white;
-    margin-left: 20px;
+    font-size: 20px;
+    
 }
 .why-us ul {
     color: whitesmoke;
     list-style-type: none;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.5;
-    margin-left: 5px;
+    margin-left: 15px;
     padding-left: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    body{
+        margin: 2%;
+    }
+    #main-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "aside main";
+
+    }
+    .join-community{
+        grid-area: header;
+        height: 100%;
+    }
+    .join-community p{
+        max-width: 80%;
+    }
+    .Sign-up{
+        grid-area: aside;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom-left-radius: 5px;
+    }
+    .Sign-up h2{
+        margin-top: 20px;
+    }
+    .why-us{
+        grid-area: main;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom-left-radius: 0px;
+        
+    }
+    .margin-left{
+        width: 80%;
+        
+    }
+    #querie{
+        margin-left: 10%;
+       
+    }
+    button{
+        width: 70%;
+        margin-left: 15%;
+    }
+    button:hover {
+        background-color: #cfe765;
+    }
 }
